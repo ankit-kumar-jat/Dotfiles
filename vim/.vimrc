@@ -1,5 +1,8 @@
 syntax on
 
+set guicursor=
+set noshowmatch
+set scrolloff=8
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -15,6 +18,13 @@ set undofile
 set incsearch
 set colorcolumn=80
 
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=50
+
 highlight ColorColumn ctermbg=0 guibg=lightgray
 
 call plug#begin('~/.vim/plugged')
@@ -26,6 +36,10 @@ Plug 'leafgarland/typescript-vim'
 Plug 'vim-utils/vim-man'
 Plug 'lyuts/vim-rtags'
 Plug 'mbbill/undotree'
+Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
