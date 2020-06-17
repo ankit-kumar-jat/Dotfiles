@@ -122,3 +122,4 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/ga
 
 alias gs="git status"
 alias ga="git add -A"
+
