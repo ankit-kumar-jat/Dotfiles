@@ -57,9 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u at \h\[\033[01;34m\] in \W\[\033[00m\] 🌀  $(git branch 2>/dev/null | grep '^*' | colrm 1 2)\n➤ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -115,11 +115,11 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/pmp:/opt/john/run
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/pmp:/opt/john/run:/home/ankit/scripts/myscripts
 
 
 # Alias
 
 alias gs="git status"
 alias ga="git add -A"
-
+alias rma="rm -I -R"

@@ -1,6 +1,7 @@
 syntax on
 
 set guicursor=
+set nowrap
 set noshowmatch
 set scrolloff=8
 set noerrorbells
