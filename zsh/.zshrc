@@ -110,3 +110,14 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+# Add By Me
+
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/pmp:/opt/john/run:/home/ankit/scripts/myscripts
+
+# Alias
+
+alias gs="git status"
+alias ga="git add -A"
+alias rma="rm -I -R"
